@@ -31,13 +31,15 @@ jobs:
     - name: Build
       run:
         ./gradlew build
-        mv build/libs/*.jar RocketUp.jar
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
         name: RocketUp.jar
         path: build/libs/*.jar
+
+    - name: Begin Release
+      run: mv build/libs/*.jar RocketUp.jar
 
     - name: Release
       uses: fnkr/github-action-ghr@v1
