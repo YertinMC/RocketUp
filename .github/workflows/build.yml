@@ -10,8 +10,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  analyze:
-    name: Analyze
+  build:
+    name: Build
     runs-on: ubuntu-latest
     permissions: write-all
 
@@ -38,7 +38,7 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
-        name: build/libs/*.jar
+        path: build/libs/*.jar
 
     - name: Release
       uses: fnkr/github-action-ghr@v1
