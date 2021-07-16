@@ -1,0 +1,12 @@
+name: RocketUp
+main: top.yertinmc.rocketup.Main
+version: ${version}
+author: xtexChooser
+description: Better Firework Rocket
+api-version: 1.13
+
+permissions:
+  rocketup:
+    use:
+      description: Use Super Firework Rocket
+      default: 'true'

@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'top.yertinmc'
+version '1.0-SNAPSHOT'
+
+repositories {
+    maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+    maven { url 'https://oss.sonatype.org/content/repositories/central' }
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.17-R0.1-SNAPSHOT'
+}
+
+processResources {
+    filesMatching 'plugin.yml', {
+        expand 'version': project.version
+    }
+}

@@ -1,0 +1,45 @@
+# 可选，物品类型过滤，无则不过滤（任何带有有效Lore的物品都能触发，不推荐）
+materials:
+  - "minecraft:firework_rocket"
+
+# 可选，起飞延迟时间（game tick），默认为0
+startDelay: 0
+
+# 可选，单人同时使用烟花数量限制，为0或无时无限制
+asyncLimit: 2
+# 可选，同时使用烟花数量到达限制时的通知，无则不通知
+# See https://minecraft.fandom.com/zh/wiki/%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%BB%A3%E7%A0%81
+asyncWarn: "§4§l你可真会玩，服务器经不起你这么玩：不能同时使用这么多烟花§r"
+
+# 可选，Lore前缀，无则不检查前缀（可没有前缀但是必须要有'#'）
+prefix: "超级烟花火箭"
+
+# 可选，teleport速度（GT），默认为1，过大时显得卡顿，过小时玩家无法转动视角
+teleportSpeed: 2
+
+# 可选，是否允许向下飞行，默认禁止
+enableDownFly: false
+
+# 可选，是否启用窒息保护，默认启用
+suffocationProtection: true
+
+# 预设
+# 将物品的第1个（即索引0）Lore设置为'前缀#预设'的格式来设置超级火箭
+#   起飞每GT x坐标偏移 = sin((directionX + 玩家yaw角度) % 360) * distanceScale
+#   起飞每GT y坐标偏移 = sin((directionY + 玩家pitch角度) % 360) * distanceScale
+#   起飞每GT z坐标偏移 = sin((directionZ + 玩家yaw角度) % 360) * distanceScale
+#   起飞每teleport周期 x坐标偏移 = 每GT x坐标偏移 * teleportSpeed
+#   起飞每teleport周期 y坐标偏移 = 每GT y坐标偏移 * teleportSpeed
+#   起飞每teleport周期 z坐标偏移 = 每GT z坐标偏移 * teleportSpeed
+presets:
+  default: # 预设ID
+    time: 100 # 起飞持续时间
+    directionX: 45 # 起飞yaw角度
+    directionY: 20 # 起飞pitch角度
+    directionZ: 45 # 起飞roll角度
+    distanceScale: 0.5 # 每tick飞行距离缩放
+    particle: SNOWBALL # 可选，粒子效果，应为org.bukkit.Particle的一个有效值名称，无则不显示
+    particleCount: 3 # 可选，粒子效果数量，默认为3
+    particleOffsetX: 0 # 可选，粒子效果x偏移，默认为0
+    particleOffsetY: 0.8 # 可选，粒子效果y偏移，默认为0.8
+    particleOffsetZ: 0 # 可选，粒子效果z偏移，默认为0
