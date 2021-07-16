@@ -137,7 +137,7 @@ public class Main extends JavaPlugin {
                             else
                                 asyncCounter.put(player.getUniqueId(), 1);
                             taskId.set(Bukkit.getScheduler().scheduleSyncRepeatingTask(Main.this, () -> {
-                                player.teleport(player.getLocation().add(offsetXpt, offsetYpt, offsetZpt));
+                                player.setVelocity(new Vector(offsetXpt, offsetYpt, offsetZpt));
                                 if (config.particle != null)
                                     player.getWorld().spawnParticle(config.particle,
                                             player.getLocation().add(config.particleOffsetX,
