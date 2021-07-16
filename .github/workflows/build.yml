@@ -1,0 +1,48 @@
+name: "Build"
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  release:
+    types: [ published ]
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    permissions: write-all
+
+    strategy:
+      fail-fast: false
+        
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up JDK
+      uses: actions/setup-java@v2
+      with:
+        java-version: '16'
+        distribution: 'adopt'
+
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+
+    - name: Build
+      run:
+        ./gradlew build
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: build/libs/*.jar
+
+    - name: Release
+        uses: fnkr/github-action-ghr@v1
+        if: github.event == 'release'
+        env:
+          GHR_PATH: build/libs/*.jar
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
