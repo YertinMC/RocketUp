@@ -190,8 +190,29 @@ public class Main extends JavaPlugin {
 
     }
 
-    public record RocketConfig(int time, Vector direction, double distanceScale, Particle particle, int particleCount,
-                               double particleOffsetX, double particleOffsetY, double particleOffsetZ) {
+    public static class RocketConfig {
+
+        public int time;
+        public Vector direction;
+        public double distanceScale;
+        public Particle particle;
+        public int particleCount;
+        public double particleOffsetX;
+        public double particleOffsetY;
+        public double particleOffsetZ;
+
+        public RocketConfig(int time, Vector direction, double distanceScale, Particle particle,
+                            int particleCount, double particleOffsetX, double particleOffsetY,
+                            double particleOffsetZ) {
+            this.time = time;
+            this.direction = direction;
+            this.distanceScale = distanceScale;
+            this.particle = particle;
+            this.particleCount = particleCount;
+            this.particleOffsetX = particleOffsetX;
+            this.particleOffsetY = particleOffsetY;
+            this.particleOffsetZ = particleOffsetZ;
+        }
 
     }
 

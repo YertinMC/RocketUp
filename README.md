@@ -1,8 +1,10 @@
 # RocketUp
 
+![Lines of code](https://img.shields.io/tokei/lines/github/YertinMC/RocketUp?style=flat-square)![GitHub all releases](https://img.shields.io/github/downloads/YertinMC/RocketUp/total?style=flat-square)![GitHub issues](https://img.shields.io/github/issues/YertinMC/RocketUp?style=flat-square)![GitHub pull requests](https://img.shields.io/github/issues-pr/YertinMC/RocketUp?style=flat-square)![GitHub](https://img.shields.io/github/license/YertinMC/RocketUp?style=flat-square)![GitHub forks](https://img.shields.io/github/forks/YertinMC/RocketUp?style=flat-square)![GitHub Repo stars](https://img.shields.io/github/stars/YertinMC/RocketUp?style=flat-square)![GitHub watchers](https://img.shields.io/github/watchers/YertinMC/RocketUp?style=flat-square)![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/YertinMC/RocketUp?include_prereleases&style=flat-square)
+
 ## 这是什么
 
-**超级烟花火箭**Spigot插件
+**超级烟花火箭**Bukkit插件
 
 ## 这玩意有什么用
 
@@ -14,14 +16,15 @@
 
 ## 怎么用
 
-理论上Spigot系服务器全版本支持（没有NMS），但是**需要Java16**，如果没有Java16，请更新Java16
+理论上Bukkit系服务器全版本支持（没有NMS）
+
+在[Releases](https://github.com/YertinMC/RocketUp/releases)可以下载正式版，[Actions](https://github.com/YertinMC/RocketUp/actions)有开发版
 
 记得看默认配置，里面有很详细的文档
 
 ## 注意
 
 - **请勿让玩家在起飞过程中退出游戏或在玩家起飞时重载服务器或突然关闭服务器，否则玩家会进入`NoGravity`（失重状态，但不会继续向上飞）**，再次使用超级烟火即可解决（也可以手动移除`NoGravity`的NBT）
-- **需要Java16**
 
 ## 协议
 
