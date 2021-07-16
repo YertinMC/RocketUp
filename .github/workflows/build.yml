@@ -41,8 +41,8 @@ jobs:
         name: build/libs/*.jar
 
     - name: Release
-        uses: fnkr/github-action-ghr@v1
-        if: github.event == 'release'
-        env:
-          GHR_PATH: build/libs/*.jar
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: fnkr/github-action-ghr@v1
+      if: github.event == 'release'
+      env:
+        GHR_PATH: build/libs/*.jar
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
