@@ -20,7 +20,9 @@
 
 在[Releases](https://github.com/YertinMC/RocketUp/releases)可以下载正式版，[Actions](https://github.com/YertinMC/RocketUp/actions)有开发版
 
-记得看默认配置，里面有很详细的文档
+记得看默认配置，里面有很详细的文档，默认配置测试指令：
+
+`/give @s minecraft:firework_rocket{display:{Lore:["\"超级烟花火箭#default\""]}} 128`
 
 ## 注意
 
