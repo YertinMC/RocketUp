@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'top.yertinmc'
-version '1.0-SNAPSHOT'
+version '1.0'
 
 repositories {
     maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
